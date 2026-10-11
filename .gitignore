@@ -1,0 +1,76 @@
+# Dependencies and package-manager state
+node_modules/
+**/node_modules/
+.pnpm-store/
+.npm/
+.yarn/
+
+# Build output and caches
+dist/
+build/
+.vite/
+.cache/
+.parcel-cache/
+coverage/
+*.tsbuildinfo
+*.tgz
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+*.local
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+*credentials*
+*secret*
+*token*
+
+# Logs, reports, screenshots, and local runtime artifacts
+.manus-logs/
+logs/
+*.log
+screenshots/
+reports/
+tmp/
+temp/
+pids/
+*.pid
+*.pid.lock
+*.seed
+
+# Editor and operating-system files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+
+# Local database files
+*.db
+*.sqlite
+*.sqlite3
+data/
+
+# Framework and tool output
+.next/
+.nuxt/
+.out/
+.storybook-out/
+.rpt2_cache_*/
+.rts2_cache_*/
+
+# Manus-managed metadata and generated webdev artifacts
+.webdev/
+.project-config.json
+client/public/__manus__/version.json

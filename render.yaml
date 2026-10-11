@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: skillbridgeai
+    runtime: node
+    plan: free
+    region: oregon
+    buildCommand: npm install -g pnpm && pnpm install && pnpm build
+    startCommand: pnpm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: skillbridgeai-db
+          property: connectionString
+      - key: JWT_SECRET
+        generateValue: true
+
+databases:
+  - name: skillbridgeai-db
+    plan: free
+    region: oregon
+    databaseName: skillbridgeai
+    user: skillbridge
